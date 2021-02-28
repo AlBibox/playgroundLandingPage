@@ -535,12 +535,32 @@ html {
           animation: rotation 3s infinite linear;
 }
 
+@-webkit-keyframes textAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes textAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .mainContainer .tabsWrapper .tabsContainer .singleTabWrapper {
   height: 100%;
 }
 
 .mainContainer .tabsWrapper .tabsContainer .singleTabWrapper .singleTabContainer {
   margin: 1.5rem 2rem;
+  -webkit-animation: textAnimation 1s ease-in-out forwards;
+          animation: textAnimation 1s ease-in-out forwards;
 }
 
 .mainContainer .tabsWrapper .tabsContainer .singleTabWrapper .singleTabContainer p {
