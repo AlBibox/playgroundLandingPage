@@ -969,6 +969,9 @@ html {
     padding: 0.5rem 0;
     font-size: 1.6em;
   }
+  .mainContainer .menuWrapper .menuContainer .navigation nav ul a:hover {
+    color: #FFF;
+  }
   .mainContainer .tabsWrapper {
     height: auto;
   }
@@ -1053,6 +1056,12 @@ html {
     margin: 0;
     padding: 0.8rem;
     text-align: center;
+  }
+  .mainContainer .footerWrapper .footerContainer .navbarWrapper nav ul a:hover {
+    color: #FFF;
+  }
+  .mainContainer .footerWrapper .footerContainer .socialIconsWrapper .singleIconWrapper svg:hover {
+    fill: #333;
   }
 }
 
