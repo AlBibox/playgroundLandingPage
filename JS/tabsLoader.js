@@ -13,7 +13,7 @@ const loadLoader = () => {
         tabContentWrapper.removeChild(tabContentWrapper.lastChild)
     }
 
-    loader.src = "../IMG/loader.png";
+    loader.src = "./IMG/loader.png";
     loaderContainer.appendChild(loader);
     loaderContainer.classList.add("loaderContainer");
     tabContentWrapper.appendChild(loaderContainer);
@@ -44,7 +44,7 @@ const loadTabTextContent = (array) => {
 const loadData = async (tabName) => {
     
     try {
-        const promise = await fetch(`../ajax/${tabName}.json`);
+        const promise = await fetch(`./ajax/${tabName}.json`);
         const data = await promise.json();
         loadTabTextContent(data.item.content);
     } catch (error) {
