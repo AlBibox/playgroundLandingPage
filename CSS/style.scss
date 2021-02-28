@@ -89,7 +89,7 @@ html{
  
         .menuContainer{   
             #menuButton{display: none;}
-            #menuButton:hover{color: rgb(223, 171, 60); transition: color 0.4s ease-in-out}
+            
                            
             width: 100%;      
             padding: 1.5rem 7rem;
@@ -688,6 +688,8 @@ html{
                     color: white;
                     cursor: pointer;
                 }
+                
+                
                 
                 .openNavigation{animation: openingNavigation 1.5s  ease-in-out 0.2s forwards;}
                 .navigation{

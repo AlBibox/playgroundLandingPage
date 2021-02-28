@@ -145,12 +145,6 @@ html {
   display: none;
 }
 
-.mainContainer .menuWrapper .menuContainer #menuButton:hover {
-  color: #dfab3c;
-  -webkit-transition: color 0.4s ease-in-out;
-  transition: color 0.4s ease-in-out;
-}
-
 .mainContainer .menuWrapper .menuContainer .navigation nav ul {
   list-style: none;
   display: -webkit-box;
