@@ -705,7 +705,7 @@ html{
                                 padding: 0.5rem 0;
                                 font-size: 1.6em;              
                             } 
-                            a:hover{color: #FFF; }
+                            
                         }
                     }
                 }
@@ -773,18 +773,13 @@ html{
                                 margin: 0;
                                 padding: 0.8rem;
                                 text-align: center;
-                            } 
-                            a:hover{color: #FFF; } 
+                            }                    
                         }
                     }
-                }
-
-                .socialIconsWrapper .singleIconWrapper svg:hover{fill: #333;}
-                               
+                }                             
             }
         }
     }    
-
 }
 
 @media (max-width: 568px){
@@ -816,16 +811,19 @@ html{
                 }
                 .contactInfo{padding-left: 0}
             }               
-        }
-       
-        
-
-         
-        
-            
+        }        
     }
 }
 
+
+@media (hover: none){
+    .mainContainer{
+        .navigation a{color: #FFF !important} 
+        .footerWrapper a:hover{color: #FFF !important;}
+        .footerWrapper svg:hover{fill: #333 !important;}
+    }
+    
+}
 
 
 

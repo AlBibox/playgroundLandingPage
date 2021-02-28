@@ -969,9 +969,6 @@ html {
     padding: 0.5rem 0;
     font-size: 1.6em;
   }
-  .mainContainer .menuWrapper .menuContainer .navigation nav ul a:hover {
-    color: #FFF;
-  }
   .mainContainer .tabsWrapper {
     height: auto;
   }
@@ -1057,12 +1054,6 @@ html {
     padding: 0.8rem;
     text-align: center;
   }
-  .mainContainer .footerWrapper .footerContainer .navbarWrapper nav ul a:hover {
-    color: #FFF;
-  }
-  .mainContainer .footerWrapper .footerContainer .socialIconsWrapper .singleIconWrapper svg:hover {
-    fill: #333;
-  }
 }
 
 @media (max-width: 568px) {
@@ -1100,6 +1091,18 @@ html {
   }
   .mainContainer .contactUsWrapper .contactUsContainer .infoContainer .contactInfo {
     padding-left: 0;
+  }
+}
+
+@media (hover: none) {
+  .mainContainer .navigation a {
+    color: #FFF !important;
+  }
+  .mainContainer .footerWrapper a:hover {
+    color: #FFF !important;
+  }
+  .mainContainer .footerWrapper svg:hover {
+    fill: #333 !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
