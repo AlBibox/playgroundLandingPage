@@ -1,0 +1,820 @@
+@font-face{
+    font-family: GothamBold;
+    src: url(../fonts/Gotham-Bold.otf);
+}
+
+@font-face{
+    font-family: GothamBook;
+    src: url(../fonts/Gotham-Book.otf);
+}
+
+@font-face{
+    font-family: GothamMedium;
+    src:url(../fonts/Gotham-Medium.otf);
+}
+
+
+@keyframes rotation {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
+}
+
+@keyframes menuScroll {
+    from {}
+    to {background-color: #000;}
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: GothamBook;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+.mainContainer{
+
+
+    max-width: 100vw;
+    overflow: hidden;
+ 
+    .swiper-container{       
+        height: 100vh;
+
+        .swiper-button-prev{color: #888; padding-left: 1.5rem;}
+        .swiper-button-next{color: #888; padding-right: 1.5rem;}
+        .swiper-pagination-bullet{background: #222; opacity: 0.9;}
+        .swiper-pagination-bullet-active{background: #888;}
+
+        .firstSlide, .secondSlide, .thirdSlide{
+            width: 100%;
+            height: 100%;
+        }
+
+        .firstSlide{
+                background-image: url("../IMG/slide-hello.jpg");
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat; 
+        }
+        .secondSlide{
+                background-image: url("../IMG/slide-circle.jpg");
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat; 
+        }
+        .thirdSlide{
+                background-image: url("../IMG/slide-play.jpg");
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat; 
+        }
+    }
+
+    
+
+    .menuWrapper{
+        position: fixed;
+        z-index: 999;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        opacity: 0.8;
+        
+ 
+        .menuContainer{   
+            #menuButton{display: none;}
+            #menuButton:hover{color: rgb(223, 171, 60); transition: color 0.4s ease-in-out}
+                           
+            width: 100%;      
+            padding: 1.5rem 7rem;
+            display: flex;
+            justify-content: space-between;
+            .navigation{
+                nav{
+                    ul{                       
+                        list-style: none;
+                        display: flex;
+                        li{
+                            margin-left: 4rem;
+                            a{
+                                text-decoration: none;
+                                color: #FFF;   
+                            }
+                           a:hover{color: rgb(223, 171, 60); transition: color 0.4s ease-in-out}                        
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    //ON SCROLL MENU ANIMATION
+    .scrolled{animation: menuScroll  2s linear forwards}
+
+    .cardsWrapper{
+        display: flex;
+        justify-content: center;
+        background-color: #ebebeb;
+     
+        
+        .cardsContainer{
+            margin: 7rem;
+            display: grid;
+            grid-template-columns: repeat(3, 310px);
+            grid-column-gap: 30px;
+                       
+            .singleCard{
+                max-width: 310px;
+                overflow-x: hidden;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-content: flex-start;
+                background-color: #fff;
+                .imgWrapper{
+                    height: 100px;
+                    width: 310px;
+                    overflow: hidden;
+                    img{max-width: 100%}
+                }
+
+                .content{
+                    height: 200px;
+                    text-align: center;
+                    padding: 2rem 3rem;
+                }
+
+                .buttonWrapper{
+                    text-align: center;
+                    background-color: black;
+                    padding: 1rem;
+                    width: 100%;
+                    a{
+                        text-decoration: none;
+                        color: #fff;
+                    }
+                }                
+            }
+        }
+    }
+
+    .bannersWrapper{
+        display: flex;
+        flex-direction: column;
+        .banner{
+            height: 100vh;
+            width: 100%;
+        }
+
+        .firstBanner{
+            background-color: #000;
+            display: flex;
+
+            .imgWrapper{
+                height: 100%;
+                width: 60%;
+                background-image: url("../IMG/banner-we-are.jpg");
+                background-position: left;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            .textWrapper{
+                height: 100%;
+                width: 40%;
+                display: flex;
+                align-items: center;
+            
+                .textContainer{
+                    width: 360px;
+                    margin-left: 4rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    color: #fff;
+                    
+                    
+                    h1{
+                        font-family: GothamBold;
+                        font-size: 5em;
+                        width: 50%;
+                        line-height: 0.8em;  
+                        color:#fff
+                    }
+                    h5{
+                        width: 70%;
+                        padding: 2rem 0;
+                    }
+                    a{
+                        width: 180px;
+                        text-align: center;
+                        text-decoration: none;
+                        color: #fff;
+                        padding: 1rem;
+                        border: 1px solid #fff;  
+                    }
+                }
+            }                
+        }
+
+        .secondBanner{
+            background-color: #fff;
+            display: flex;
+            flex-direction: row-reverse;
+
+            .imgWrapper{
+                height: 100%;
+                width: 60%;
+                background-image: url("../IMG/banner-we-do.jpg");
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            
+            .textWrapper{
+                height: 100%;
+                width: 40%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+
+                .textContainer{                 
+                    margin-right: 4rem;
+                    width: 360px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    color: #000;
+                    
+   
+                    h1{
+                        font-family: GothamBold;
+                        text-align: right;
+                        font-size: 5em;
+                        width: 50%;
+                        line-height: 0.8em;  
+                    }
+                    h5{
+                        width: 70%;
+                        text-align: right;
+                        padding: 2rem 0;
+                    }
+                    a{
+                        width: 180px;
+                        text-align: center;
+                        text-decoration: none;
+                        color: #000;
+                        padding: 1rem;
+                        border: 1px solid #000;  
+                    }
+                }
+            }         
+        }
+        
+        .thirdBanner{
+            background-color: #000;
+            display: flex;
+
+            .imgWrapper{
+                height: 100%;
+                width: 60%;
+                background-image: url("../IMG/banner-carrers.jpg");
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            .textWrapper{
+                height: 100%;
+                width: 40%;
+                display: flex;
+                align-items: center;
+                
+                .textContainer{
+                    width: 360px;
+                    margin-left: 4rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    color: #fff;
+                    
+                    
+                    h1{
+                        font-family: GothamBold;
+                        font-size: 5em;
+                        width: 50%;
+                        line-height: 0.8em;  
+                        color:#fff
+                    }
+                    h5{
+                        width: 70%;
+                        padding: 2rem 0;
+                    }
+                    a{
+                        width: 180px;
+                        text-align: center;
+                        text-decoration: none;
+                        color: #fff;
+                        padding: 1rem;
+                        border: 1px solid #fff;  
+                    }
+                }
+            }           
+        }
+    }
+
+    .tabsWrapper{
+        display: flex;
+        justify-content: center;
+        background-color: #ebebeb;
+        height: 500px;
+
+        .tabsContainer{
+            width: 100%;
+            margin: 7rem;
+            display: flex;
+
+            .tabsTitleContainer{
+                width: 40%;
+                height: 100%;
+                background-color: #ebebeb;
+                display: flex;
+                flex-direction: column;
+
+                .singleTabTitle{
+                    background-color: #cccccc;
+                    padding: 1.5rem 2rem;
+                    border-bottom: 1px solid #fff;
+                    cursor: pointer;
+                }
+
+                .selected{
+                    background-color: #000;
+                    color: #fff;
+                }
+            }
+
+            .tabContentWrapper{
+                width: 60%;
+                height: 100%;
+                background-color: #FFF;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .loaderContainer{
+                    width: 2rem;
+                    height: auto;
+                   
+                    img{
+                        width: 100%;
+                        height: auto;
+                        animation: rotation 3s infinite linear;                       
+                    }
+                }
+            }
+
+            .singleTabWrapper{
+                height: 100%;
+                .singleTabContainer{
+                    margin: 1.5rem 2rem;
+                
+                    p{
+                        display: inline;
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .contactUsWrapper{
+        height: 500px;
+        width: 100%;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        border-bottom: 2px solid #333;
+        .contactUsContainer{  
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin:auto 7rem;
+            .infoContainer{      
+                    
+                color: #FFF;
+                width: 40%;
+                .contactTitle{
+                    margin-bottom: 2rem;
+                    h1{
+                        font-family: GothamBold;
+                        font-size: 5em;
+                        line-height: 0.8em;
+                    }
+                }
+
+                .contactInfo h5{padding: 0.5rem 0}                
+            }
+
+            .formContainer{            
+                width: 55%;     
+                .form{
+                    margin-top: 1rem;
+                    input, textarea{
+                        background-color: black;
+                        color: #FFF;
+                        border: 1px solid #fff;
+                        padding: 0.5rem;    
+                        font-size: 1em; 
+                        resize: none;
+                    }
+
+                    .doubleInput, .singleInput{
+                        margin-bottom: 1rem;
+                    }
+
+                    .doubleInput{
+                        display: flex;
+                        input{
+                            width: 50%;
+                        }
+                        .first{
+                            margin-right: 1rem;
+                        }
+                    }
+
+                    .singleInput{
+                        input, textarea{
+                            width: 100%;
+                        }
+                    }
+
+                    button{
+                        width: 166px;
+                        padding: 0.5rem 1rem;
+                        color: #000;
+                        background-color: #fff;
+                        border: none;
+                        font-family: GothamBook;
+                        font-size: 1em;         
+                        cursor: pointer;
+                    }
+
+                    .error::placeholder{
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+
+    .footerWrapper{
+        height: 350px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+
+        .footerContainer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            .logoWrapper{
+                display: flex;
+                justify-content: center;
+                padding: 1rem 0;
+                img{width: 12rem}
+            }
+
+            .navbarWrapper{             
+                nav{
+                    ul{
+                        list-style: none;
+                        display: flex;
+                        a{
+                            text-decoration: none;
+                            color: #FFF;
+                            li{margin: 2rem}
+                        }
+                        a:hover{color: rgb(223, 171, 60); transition: color 0.4s ease-in-out}
+                    }
+                }
+            }
+
+            .socialIconsWrapper{
+                display: flex;
+                justify-content: center;
+                
+                .singleIconWrapper{
+                    padding: 1rem;
+                    svg{
+                        fill: #333;
+                        width: 2rem;
+                        height: 2rem;
+                    }
+                    svg:hover{fill: rgb(223, 171, 60); transition: fill 0.4s ease-in-out}
+                }
+            }
+        }
+    }
+    
+    .cookieBannerWrapper{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        bottom: 0;
+        background: #fff;
+        z-index: 999;
+        .cookieBannerContainer{
+            display: flex;
+            padding: 1rem;
+            .cookieText{font-size: 0.8em}
+            .bannerWrapper{
+                margin-left: 2rem;
+                button{
+                    cursor: pointer;
+                    background-color: black;
+                    color: #FFF;
+                    border: none;
+                    padding: 0.5rem 2rem
+                }
+            }
+        }
+    }
+}
+
+
+//MEDIA QUERY BIG TABLETS
+@media(max-width: 1024px){
+    html{font-size: 90%;}
+
+    .mainContainer {
+        .menuWrapper .menuContainer{             
+            padding: 1.5rem 4rem; 
+            .navigation nav ul li{margin-left: 3rem}
+        }
+
+        .cardsWrapper .cardsContainer{
+                margin: 4rem;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, auto);
+                grid-row-gap: 30px;                       
+                .singleCard .content{height: 160px}                        
+        } 
+        
+         .bannersWrapper{
+
+            .firstBanner{
+                .imgWrapper{display: none}
+
+                .textWrapper{                
+                    width: 100%;
+                    justify-content: flex-end;
+                    background-image: url("../IMG/banner-we-are.jpg");
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                
+                    .textContainer{margin-left: 0}
+                }                
+            }
+
+            .secondBanner{
+                .imgWrapper{
+                    display: none;
+                }
+                
+                .textWrapper{
+                    width: 100%;
+                    justify-content: flex-start;
+                    background-image: url("../IMG/banner-we-do.jpg");
+                    background-position: top center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+
+                    .textContainer{                 
+                        margin-right: 0;
+                        color: #FFF;
+                        
+                        
+                        a{
+                            color: #FFF;                            
+                            border: 1px solid #FFF;  
+                        }
+                    }
+                }         
+            }
+            
+            .thirdBanner{
+                .imgWrapper{display: none}
+
+                .textWrapper{
+                    width: 100%;              
+                    justify-content: flex-end;
+                    background-image: url("../IMG/banner-carrers.jpg");
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    
+                    .textContainer{margin-left: 0}
+                }           
+            }
+        }
+
+        .tabsWrapper{
+            height: 450px;
+            .tabsContainer{
+                margin: 4rem;
+            }
+        }
+
+        .contactUsWrapper .contactUsContainer{  
+            margin:auto 4rem;
+        }
+    }
+}
+
+//MEDIA TABLETS AND PORTRAIT PHONE
+
+@keyframes openingMenu{
+    from {height: 5rem;}
+    to{height: 100vh;}
+}
+
+@keyframes openingNavigation{
+    from {height: 0;}
+    to{height: 100%;}
+}
+
+
+@media (max-width: 824px){
+    .mainContainer{
+        .scrolled{animation: none}
+        .openWrapper{
+            
+            animation: openingMenu 0.5s forwards ease-in;
+        }
+        .menuWrapper{
+            opacity: 0.8;
+            background-color: black;
+            
+            .menuContainer{   
+                padding: 1.5rem 2rem;
+                flex-direction: column;
+
+                #menuButton{
+                    display: block;
+                    position: fixed;
+                    right: 2rem;
+                    top: 1.5rem;
+                    font-size: 1.2em;
+                    color: white;
+                    cursor: pointer;
+                }
+                
+                .openNavigation{animation: openingNavigation 1.5s  ease-in-out 0.2s forwards;}
+                .navigation{
+                    height: 0;
+                    overflow: hidden;
+                    
+                    nav{
+                        margin-top: 3rem;
+                        ul{                            
+                            flex-direction: column;
+                            li{
+                                margin-left: 0;
+                                padding: 0.5rem 0;
+                                font-size: 1.6em;              
+                            } 
+                        }
+                    }
+                }
+            }
+        }
+
+        .tabsWrapper{
+            height: auto;
+            .tabsContainer{               
+                flex-direction: column;  
+                .tabsTitleContainer{
+                    width: 100%;
+                    height: auto;
+                    .singleTabTitle{padding: 1rem 2rem}            
+                }
+
+                .tabContentWrapper{
+                    width: 100%;
+                    .loaderContainer{
+                        width: 2rem;
+                        height: auto;
+                        display: flex;
+                        justify-content: center;
+                        img{margin: 5rem}             
+                    }
+                }
+            }
+        }
+  
+        .contactUsWrapper{
+            height: 100%;
+            
+            .contactUsContainer{  
+                display: flex;
+                flex-direction: column;
+                margin:4rem;
+             
+                .infoContainer{               
+                    width: 100%;
+                    display: flex;
+                    margin-bottom: 2rem;
+                    
+                    .contactTitle{
+                        width: 22em;
+                        margin-bottom: 0;                      
+                    }
+                    .contactInfo{padding-left: 2rem}
+                }
+
+                .formContainer{width: 100%}
+            }
+        }
+
+        .footerWrapper{
+            height: auto;
+            .footerContainer{
+                margin: 2.5rem;
+                .navbarWrapper{   
+                    margin: 1rem 0 1rem 0;          
+                    nav{
+                        ul{
+                            flex-direction: column;
+                            justify-content: center;
+                            a li{
+                                margin: 0;
+                                padding: 0.8rem;
+                                text-align: center;
+                            }  
+                        }
+                    }
+                }
+            }
+        }
+    }    
+
+}
+
+@media (max-width: 568px){
+    html{
+        font-size: 80%;
+    }
+
+    .mainContainer{
+
+         
+         .cardsWrapper .cardsContainer{margin: 4rem 2rem} 
+
+         .bannersWrapper{
+            .firstBanner .textWrapper .textContainer{margin-left: 2rem}
+            .secondBanner .textWrapper .textContainer{margin-right: 2rem}           
+            .thirdBanner .textWrapper .textContainer{margin-left: 2rem}                               
+        }
+
+         .tabsWrapper .tabsContainer{margin: 4rem 2rem}
+
+         .contactUsWrapper .contactUsContainer{  
+            margin:4rem 2rem;
+            .infoContainer{               
+                flex-direction: column;
+                margin-bottom: 2rem;    
+                .contactTitle{
+                    width: 100%;
+                    margin-bottom: 2rem;                      
+                }
+                .contactInfo{padding-left: 0}
+            }               
+        }
+       
+        
+
+         
+        
+            
+    }
+}
+
+
+
+
+
+

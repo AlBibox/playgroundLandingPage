@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css"></link>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="mainContainer" id="mainContainer">
+
+<!--MENU-------------------------------------------------------------------------------------------------->
+        <div class="menuWrapper" id="menuWrapper">   
+            <div class="menuContainer">
+                <div class="logo">
+                    <img src="./IMG/logo-playground-white.png" alt=""></img>
+                </div>
+                <span id="menuButton">MENU</span>
+                <div class="navigation" id="navigation">
+                    <nav>
+                        <ul>
+                            <li><a href="#firstBanner">we are</a></li>
+                            <li><a href="#secondBanner">we do</a></li>
+                            <li><a href="#thirdBanner">careers</a></li>
+                            <li><a href="#contactUs">contact us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                
+            </div>
+        </div>
+<!--MENU-------------------------------------------------------------------------------------------------->
+        
+<!--SLIDER-------------------------------------------------------------------------------------------------->
+        <!-- Slider main container -->
+        <div class="swiper-container" id="headerSlider">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="firstSlide"></div>
+                    
+                </div>
+                <div class="swiper-slide">
+                    <div class="secondSlide"></div>
+                    
+                </div>
+                <div class="swiper-slide">
+                    <div class="thirdSlide"></div>
+                    
+                </div>    
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+<!--SLIDER-------------------------------------------------------------------------------------------------->
+
+<!--CARDS------------------------------------------------------------------------------------------->
+        <div class="cardsWrapper">
+            <div class="cardsContainer">
+                <div class="singleCard">
+                    <div class="imgWrapper">
+                        <img src="./IMG/card-innovation.png" alt="">
+                    </div>
+                    <div class="content">
+                        Aenean mollis dolor a mattis viverra. In hac habitasse platea dictumst. Curabitur tempus dui tortor, et
+                        bibendum lacus eleifend ut.           
+                    </div>
+                    <div class="buttonWrapper">
+                        <a href="#">READ MORE</a>
+                    </div>
+                </div>
+                       
+                <div class="singleCard">
+                    <div class="imgWrapper">
+                        <img src="./IMG/card-innovation.png" alt="">
+                    </div>
+                    <div class="content">
+                        Suspendisse vehicula, lectus sed molestie aliquam, arcu neque gravida lacus.           
+                    </div>
+                    <div class="buttonWrapper">
+                        <a href="#">READ MORE</a>
+                    </div>
+                </div>
+                        
+                <div class="singleCard">
+                    <div class="imgWrapper">
+                        <img src="./IMG/card-innovation.png" alt="">
+                    </div>
+                    <div class="content">
+                        Donec vitae augue tellus. Proin et urna sit amet metus fermentum dapibus non quis urna.            
+                    </div>
+                    <div class="buttonWrapper">
+                        <a href="#">READ MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--CARDS-------------------------------------------------------------------------------------------->
+
+<!--BANNERS--------------------------------------------------------------------------------------------->
+        <div class="bannersWrapper">
+            <div class="banner firstBanner" id="firstBanner">
+                <div class="imgWrapper"></div>
+                <div class="textWrapper">
+                    <div class="textContainer">
+                        <h1>we are.</h1>
+                        <h5>Consectetur adipiscing elit. Nulla condimentum tortor sem.</h5>
+                        <a href="#">THE PLAYERS ></a>
+                    </div>
+                </div>       
+            </div>           
+
+            <div class="banner secondBanner" id="secondBanner"> 
+                <div class="imgWrapper"></div>
+                <div class="textWrapper">
+                    <div class="textContainer">
+                        <h1>we do.</h1>
+                        <h5>Consectetur adipiscing elit. Nulla condimentum tortor sem.</h5>
+                        <a href="#">THE PROJECTS ></a>
+                    </div>
+                </div>   
+            </div>
+            
+            <div class="banner thirdBanner" id="thirdBanner">
+                <div class="imgWrapper"></div>
+                <div class="textWrapper">
+                    <div class="textContainer">
+                        <h1>careers.</h1>
+                        <h5>Consectetur adipiscing elit. Nulla condimentum tortor sem.</h5>
+                        <a href="#">THE POSITIONS ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--BANNERS--------------------------------------------------------------------------------------------------->
+
+<!--ASYNC TABS--------------------------------------------------------------------------------------------------->
+        <div class="tabsWrapper">
+            <div class='tabsContainer'>
+                <div class="tabsTitleContainer">
+                    <div class="singleTabTitle selected" id="tab1">Vestibulum at odio sit amet</div>
+                    <div class="singleTabTitle" id="tab2">Sed vehicula neque</div>
+                    <div class="singleTabTitle" id="tab3">Nulla id libero pretium</div>
+                </div>
+                <div class="tabContentWrapper" id="tabContentWrapper"></div>
+            </div>
+        </div>
+<!--ASYNC TABS--------------------------------------------------------------------------------------------------->
+
+<!--CONTACT US--------------------------------------------------------------------------------------------------->
+        <div class="contactUsWrapper" id="contactUs">
+            <div class="contactUsContainer">
+                <div class="infoContainer">
+                    <div class="contactTitle">
+                        <h1>contact us.</h1>
+                    </div>
+                    <div class="contactInfo">
+                        <h5>Playground srl</h5>
+                        <h5>Via G. Mazzini 3/C,</h5>
+                        <h5>Cernusco Sul Naviglio (Milano)</h5>
+                        <h5>-</h5>
+                        <h5>T +39 0240706003</h5>
+                    </div>
+                    
+                    
+                </div>
+                <div class="formContainer">
+                    <form action="#" class="form" id="contactForm" onsubmit="return(validation())">
+                        <div class="doubleInput">
+                            <input type="text" class="first" placeholder="Name"></input>
+                            <input type="text" placeholder="Surname"></input>
+                        </div>
+                        <div class="singleInput">
+                            <input type="text" placeholder="Email" id="mailInput"></input>
+                        </div>
+                        <div class="singleInput">
+                            <textarea placeholder="Message"rows="8" id="textareaMessage"></textarea>
+                        </div>
+                        <button type="submit">SEND ></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+<!--CONTACT US--------------------------------------------------------------------------------------------------->
+
+<!--FOOTER--------------------------------------------------------------------------------------------------->
+        <div class="footerWrapper">
+            <div class="footerContainer">
+                <div class="logoWrapper">
+                    <img src="./IMG/logo-playground-white.png" alt="">
+                </div>
+                <div class="navbarWrapper">
+                    <nav>
+                        <ul>
+                            <a href="#firstBanner"><li>we are</li></a>
+                            <a href="#secondBanner"><li>we do</li></a>
+                            <a href="#thirdBanner"><li>careers</li></a>
+                            <a href="#contactUs"><li>contact us</li></a>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="socialIconsWrapper">
+                    <div class="singleIconWrapper">
+                        <a href="#">
+                            <svg>
+                                <use xlink:href="fa-brands.svg#facebook"></use>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="singleIconWrapper">
+                        <a href="#">
+                            <svg>
+                                <use xlink:href="fa-brands.svg#linkedin-in"></use>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="singleIconWrapper">
+                        <a href="#">
+                            <svg>
+                                <use xlink:href="fa-brands.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </div>          
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    
+
+</body>
+<script src="./JS/scrollAnimation.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="./JS/swiperSlider.js"></script>
+<script src="./JS/tabsLoader.js"></script>
+<script src="./JS/formValidation.js"></script>
+<script src="./JS/cookieBar.js"></script>
+</html>
